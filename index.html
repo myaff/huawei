@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="build/css/main.css" rel="stylesheet">
+  <script src="build/js/vendor/jquery-3.1.1.slim.min.js"></script>
+  <script src="build/js/vendor/mobile.js"></script>
+  <script src="build/img/svg/sprite.js"></script>
+  <title>Huawei</title>
+</head>
+<body>
+<div class="svg-placeholder hidden"></div>
+<script>$('.svg-placeholder').html(SVG_SPRITE);</script>
+<div class="layout layout--home">
+<div class="header">
+	<div class="header__content">
+	  <div class="btn-menu__wrapper">
+	    <button class="btn-menu js-modal" data-target="#main-menu">
+	      <svg class="icon"><use xlink:href="#burger"/></svg>
+	    </button>
+	  </div>
+	  <div class="header__logo logo logo--huawei">
+      <a href="#" class="logo__link" target="_blank">
+        <img src="build/img/logo_huawei.png" alt="Huawei" />
+      </a>
+	  </div>
+	  <div class="header__logo logo logo--marie-claire">
+      <a href="#" class="logo__link" target="_blank">
+        <img src="build/img/logo_marie-claire.png" alt="Marie Claire" />
+      </a>
+	  </div>
+	</div>
+</div><div class="page page--home">
+  <div class="container">
+    <div class="page__img"><img src="build/img/logo_huawei-nova-2.png" alt="Huawei Nova 2"></div>
+    <div class="page__heading tp-heading--huge mt-2">все возможно!</div>
+    <div class="page__text">
+      <div class="tp-body--base">
+        <p>Они владеют высшей математикой фотоискусства и привыкли работать с профессиональными камерами, но мы бросили вызов и дали им в руки Huawei nova2, чтобы посмотреть, что из этого выйдет.</br>
+        Сможете ли вы узнать среди снимков те, что были сделаны на смартфон?</br>
+        Проверьте себя!</p>
+      </div>
+      <a href="" class="btn btn--alt mt-3">Пройти тест</a>
+    </div>
+    <div class="owl-carousel carousel--home">
+              <div class="carousel__item interview">
+          <div class="interview__photo"><img src="build/img/home/borisov.png"/></div>
+          <div class="interview__heading">
+            <div class="interview__name tp-heading--large">Катрин Борисов</div>
+            <div class="interview__position tp-body--wide">арт-директор галереи RuArts</div>
+            <a href="borisov.html" class="interview__link btn mt-4">Читать интервью</a>
+          </div>
+        </div>
+              <div class="carousel__item interview disabled">
+          <div class="interview__photo"><img src="build/img/home/zemlianoy.png"/></div>
+          <div class="interview__heading">
+            <div class="interview__name tp-heading--large">Антон Земляной</div>
+            <div class="interview__position tp-body--wide">fashion-фотограф</div>
+            <a href="zemlianoy.html" class="interview__link btn mt-4">Читать интервью</a>
+          </div>
+        </div>
+              <div class="carousel__item interview disabled">
+          <div class="interview__photo"><img src="build/img/home/sarapultseva.png"/></div>
+          <div class="interview__heading">
+            <div class="interview__name tp-heading--large">Лена Сарапульцева</div>
+            <div class="interview__position tp-body--wide">fashion-фотограф</div>
+            <a href="sarapultseva.html" class="interview__link btn mt-4">Читать интервью</a>
+          </div>
+        </div>
+          </div>
+  </div>
+</div> <!-- /.page -->
+<div class="footer">
+  <div class="footer__content">
+    <div class="footer__socials">
+      <div class="social social--inline">
+  <div class="social__title">Поделитьcя</div>
+  <div class="social__delimiter"></div>
+  <a href="#" class="social__link" target="_blank" data-type="fb">
+    <svg class="icon social__icon">
+      <use xlink:href="#facebook"/>
+    </svg>
+    <span class="social__text">Facebook</span>
+  </a>
+  <a href="#" class="social__link" target="_blank" data-type="vk">
+    <svg class="icon social__icon">
+      <use xlink:href="#vk"/>
+    </svg>
+    <span class="social__text">Vkontakte</span>
+  </a>
+  <a href="#" class="social__link" target="_blank" data-type="tw">
+    <svg class="icon social__icon">
+      <use xlink:href="#twitter"/>
+    </svg>
+    <span class="social__text">Twitter</span>
+  </a>
+</div>    </div>
+  </div>
+</div>
+</div> <!-- /.layout -->
+<div class="modal__wrapper invisible">
+  <div id="main-menu" class="modal invisible" data-fullscreen>
+    <button class="btn-close js-modal" data-target="#main-menu"></button>
+    <div class="modal__content">
+      <nav class="nav tp-text--center">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+          <li class="nav__item"><a href="test.html" class="nav__link disabled">Тест</a></li>
+          <li class="nav__item"><a href="sarapultseva.html" class="nav__link">Лена Сарапульцева</a></li>
+          <li class="nav__item"><a href="zemlianoy.html" class="nav__link">Антон Земляной</a></li>
+          <li class="nav__item"><a href="borisov.html" class="nav__link">Катрин Борисов</a></li>
+        </ul>
+      </nav>
+      <div class="modal__socials social">
+        <div class="social__title">Поделиться проектом в социальных сетях:</div>
+        <a href="#" class="social__link" target="_blank" data-type="fb">
+          <svg class="icon social__icon">
+            <use xlink:href="#facebook"/>
+          </svg>
+        </a>
+        <a href="#" class="social__link" target="_blank" data-type="vk">
+          <svg class="icon social__icon">
+            <use xlink:href="#vk"/>
+          </svg>
+        </a>
+        <a href="#" class="social__link" target="_blank" data-type="tw">
+          <svg class="icon social__icon">
+            <use xlink:href="#twitter"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div><script src="build/js/vendor/owl.carousel.min.js"></script>
+<script src="build/js/vendor/share.js"></script>
+<script src="build/js/main.js"></script>
+</body>
+</html>
