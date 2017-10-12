@@ -1,0 +1,30 @@
+.page {
+  &--ls {
+    margin-bottom: -95px;
+  }
+  &--ls &__content {
+  margin-top: -160px;
+  }
+  &--ls .promo {
+    margin-top: -1rem;
+  }
+  &--ls .slider {
+    width: 780px;
+    padding: 0 100px;
+  }
+  &--ls + .footer {
+    padding-bottom: 5rem;
+  }
+}
+.ls {
+  &-4 {
+    .text-wrapper {
+      margin-left: -5px;
+    }
+  }
+  &-10 {
+    img {
+      margin-right: -20px;
+    }
+  }
+}

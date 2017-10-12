@@ -88,4 +88,7 @@ $RECYCLE.BIN/
 design/*
 build/*
 mobile/*
-src/*
+src/images/*
+src/assets/*
+src/js/*
+src/svg/*

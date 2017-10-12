@@ -1,0 +1,35 @@
+.page {
+  &--az {
+    margin-bottom: -88px;
+  }
+  &--az &__content {
+    margin-top: -155px;
+  }
+  &--az .promo {
+    margin-top: -35px;
+  }
+  &--az + .footer {
+    padding-bottom: 3.5rem;
+  }
+}
+.az {
+  &-1 {
+    .text-wrapper {
+      margin-right: -5px;
+    }
+  }
+  &-3 {
+    .text-wrapper {
+      margin-right: -35px;
+      margin-left: -10px;
+    }
+  }
+  &-5 {
+    img {
+      margin-right: -26px;
+    }
+    .text-wrapper {
+      margin-right: -20px;
+    }
+  }
+}

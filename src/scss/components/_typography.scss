@@ -1,0 +1,147 @@
+p {
+  margin: 2rem 0;
+  @include null-first-last-margin();
+}
+
+[class*="tp-heading"] {
+  color: $color--heading;
+}
+.tp-heading {
+  &--huge {
+    font-size: $font-size--huge;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  &--large {
+    @include heading {
+      font-size: $font-size--large;
+      line-height: 1.5;
+    }
+  }
+  &--big {
+    @include heading {
+      font-size: $font-size--big;
+      font-weight: bold;
+      line-height: normal;
+    }
+  }
+  &--medium {
+    @include heading {
+      font-size: $font-size--medium;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      
+      @media #{$md-landing} {
+        font-size: 1.55vw;
+      }
+      
+      @media #{$xs} {
+        font-size: 5.31vw;
+      }
+    }
+  }
+}
+
+.tp-body {
+  &--large {
+    font-size: $font-size--large;
+    line-height: 1.2;
+    letter-spacing: 0.4em;
+  }
+  &--medium {
+    font-size: $font-size--main;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    line-height: 2;
+  }
+  &--base {
+    font-size: $font-size--base;
+  }
+  &--main {
+    font-size: $font-size--main;
+    line-height: 1.67;
+    .text-wrapper & {
+      max-width: 52rem;
+    }
+  }
+  &--wide {
+    font-size: $font-size--main;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+  }
+  &--small {
+    font-size: $font-size--small;
+    letter-spacing: 2px;
+  }
+  
+}
+
+
+.tp-text {
+  @each $align in (left, right, center) {
+    &--#{$align} {
+      text-align: $align;
+    }
+  }
+}
+
+.l-block {
+  @each $align in (left, right) {
+    &--#{$align} {
+      float: $align;
+    }
+  }
+  &--center {
+    margin: 0 auto;
+  }
+}
+
+.img-wrapper {
+  width: 34.325rem;
+  
+  @media #{$md-landing} {
+    width: 47.73vw;
+  }
+  
+  
+  &--big {
+    width: 38.75rem;
+    
+    @media #{$md-landing} {
+      width: 53.88vw;
+    }
+  }
+  &, &--big {
+    @media #{$xs} {
+      width: 100vw;
+      margin-left: calc(-1 * (100vw - 100%) / 2);
+      margin-right: calc(-1 * (100vw - 100%) / 2);
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+b, strong {
+  font-weight: 600;
+}
+.text-block {
+  max-width: 24.75rem;
+  
+  @media #{$md-landing} {
+    max-width: 33vw;
+  }
+  @media #{$xs} {
+    max-width: 100%;
+  }
+}

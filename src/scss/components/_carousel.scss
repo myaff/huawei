@@ -1,0 +1,68 @@
+@import 'owl.carousel/core';
+@import 'owl.carousel/animate';
+//@import 'owl.carousel/autoheight';
+//@import 'owl.carousel/lazyload';
+//@import 'owl.carousel/video';
+
+.owl-nav {
+  @include absolute(top 50% left 0);
+  @include size(100%, 4.75rem);
+  display: flex;
+  justify-content: space-between;
+  margin-top: -2.375rem;
+}
+.owl-prev,
+.owl-next {
+  @include circle(4.75rem, 50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: opacity 0.2s;
+  border: 2px solid #959595;
+  
+  &.disabled {
+    opacity: 0.15;
+    cursor: default!important;
+  }
+}
+@each $dir in (prev, next) {
+  .owl-#{$dir} {
+    background-image: url('../img/arrow-#{$dir}.svg');
+  }
+}
+
+.carousel {
+  $nav-color: #605ca8;
+  &--home {
+    margin-left: -224px;
+    width: calc(100% + 224px);
+    
+    .owl-nav {
+      top: 450px;
+      left: auto;
+      right: 0;
+    }
+    .owl-prev {
+      display: none;
+    }
+    .owl-next {
+      background: url('../img/arrow-double.svg') center no-repeat;
+      @include absolute(top 0 right 7.5rem);
+      @include size(4.75rem);
+      border-radius: 50%;
+      color: $nav-color;
+      border: 2px solid currentColor;
+      overflow: visible;
+      &::after {
+        content: 'Следующее интеврью';
+        display: block;
+        width: 7.5rem;
+        font-size: $font-size--main;
+        line-height: normal;
+        font-weight: bold;
+        text-decoration: underline;
+        @include absolute(top 1rem left 6rem);
+        background: transparent;
+      }
+    }
+  }
+}

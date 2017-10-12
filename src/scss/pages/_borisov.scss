@@ -1,0 +1,31 @@
+.page {
+  &--kb {
+    margin-bottom: -68px;
+  }
+  &--kb &__content {
+    margin-top: -170px;
+  }
+  &--kb .slider {
+    width: 710px;
+    padding: 0 140px;
+  }
+  &--kb + .footer {
+    padding-bottom: 4rem;
+  }
+}
+.kb {
+  &-1,
+  &-3,
+  &-5,
+  &-7,
+  &-10 {
+    img {
+      margin-right: -20px;
+    }
+  }
+  &-10 {
+    .text-wrapper {
+      margin-right: -20px;
+    }
+  }
+}

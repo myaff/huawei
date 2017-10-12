@@ -1,0 +1,24 @@
+.page {
+  &--home {
+    margin-top: -1 * $header-height;
+    padding-top: 20px;
+    margin-bottom: -2rem;
+  }
+  &--home &__img,
+  &--home &__heading {
+    margin-left: 210px;
+  }
+  &--home &__text {
+    @include absolute(top 130px left 565px);
+  }
+  &--home &__heading,
+  &--home &__text {
+    color: $color--alt;
+    z-index: 2;
+    
+    .tp-body--base {
+      line-height: 1.88em;
+      letter-spacing: 0.1em;
+    }
+  }
+}

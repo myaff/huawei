@@ -1,0 +1,216 @@
+$modal-overlay-bg: $body-bg;
+$modal-bg: transparent;
+
+$modal-overlay-bg--aside: #fff;
+$modal-bg--aside: #e9edf2;
+
+$modal-width: 45rem;
+$modal-height: 100vh;
+
+.modal {
+
+  @include absolute(top 0 left 50%);
+  @include size($modal-width, $modal-height);
+  margin-left: -1 * $modal-width / 2;
+  background: $modal-bg;
+  z-index: 0;
+  opacity: 0;
+  transform: translateY(50%) scaleY(0);
+  transition: opacity 0.3s, transform 0.3s, z-index 0.1s 0.3s;
+  
+  @media screen and (max-width: #{$modal-width + 3rem}) {
+    width: calc(100% - 3rem);
+    right: 1.5rem;
+    left: 1.5rem;
+    margin: 0;
+  }
+  @media #{$xs} {
+    width: calc(100% - 6.26vw);
+    left: 3.13vw;
+    right: 3.13vw;
+  }
+  
+  &__wrapper.is-fullscreen & {
+    top: 0;
+  }
+  
+  &.is-opened {
+    z-index: 1;
+    opacity: 1;
+    transform: scaleY(1) translateY(0);
+    transition: z-index 0.1s, opacity 0.3s 0.1s, transform 0.3s 0.1s;
+  }
+  
+  &--big {
+    left: 0;
+    @include size(100%);
+    margin: 0;
+    background: transparent;
+    padding-bottom: 4.63vh;
+    overflow-y: auto;
+  }
+  
+  &--aside {
+    background: $modal-bg--aside;
+    top: 1.25rem;
+    right: 1.25rem;
+    //bottom: 1.25rem;
+    left: auto;
+    height: auto;
+    padding: 1rem;
+    bottom: auto;
+    
+    @media #{$xs-height} {
+      bottom: initial;
+      margin-bottom: 1.25rem;
+    }
+    @media #{$xs} {
+      left: 3.13vw;
+      right: 3.13vw;
+      top: 3.13vw;
+      bottom: initial;
+      margin-bottom: 3.13vw;
+      padding: 3.13vw;
+    }
+  }
+  
+  &__wrapper {
+    @include fixed(top 0 left 0);
+    @include size(100%);
+    background: $modal-overlay-bg;
+    z-index: -1 * $z-index--modal;
+    padding-top: 1rem;
+    overflow-y: auto;
+    opacity: 0;
+    transition: opacity 0.3s, z-index 0.1s 0.3s;
+    
+    @media #{$xs} {
+      padding-top: 0;
+    }
+    
+    &.is-opened {
+      opacity: 1;
+      z-index: $z-index--modal;
+      transition: z-index 0.1s, opacity 0.3s 0.1s;
+    }
+    
+    &.is-fullscreen {
+      z-index: $z-index--modal + $z-index--header;
+      padding-top: 1rem;
+      overflow-y: auto;
+    }
+    &--aside {
+      background: $modal-overlay-bg--aside;
+      background-size: contain;
+      padding: 1.25rem;
+      &,
+      &.is-opened {
+        z-index: $z-index--modal + $z-index--header;
+      }
+      @media #{$xs} {
+        background-size: cover;
+      }
+    }
+  }
+  
+  .btn-close {
+    @include absolute(top 2.5rem right 0);
+    z-index: $z-index--modal + 1;
+    
+    @media #{$xs} {
+      top: 3.13vw;
+    }
+  }
+  
+  &__content {
+    height: 100%;
+    background: transparent;
+  }
+  &--aside &__content {
+    border: 3px solid $color--primary;
+    padding: 1.25rem 1.5rem 2.5rem;
+    
+    @media #{$xs} {
+      padding: 3.13vw 3.13vw 7.5vw;
+    }
+  }
+  
+  &__subheading {
+    text-decoration: underline;
+    margin-bottom: 1vh;
+    
+    a {
+      color: inherit;
+    }
+    
+    @media #{$xs} {
+      margin-bottom: 5vw;
+    }
+  }
+  
+  &__heading {
+    margin-bottom: 4vh;
+    
+    @media #{$sm-height} {
+      margin-bottom: 2vh;
+      font-size: 7vh;
+    }
+    @media #{$xs-height} {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+    }
+    @media #{$xs} {
+      font-size: 15vw;
+      margin-bottom: 7.5vw;
+    }
+  }
+  
+  &__text {
+    @include null-childs-margin();
+    p {
+      margin: 2vh 0;
+    }
+    ._code{
+      font-family: $font--accent;
+    }
+
+    ._sep{
+      margin: 0 auto 2vh;
+      height: 2px;
+      width: 7.625rem;
+      background-color: #000;
+    }
+    .btn.btn--center {
+      margin-top: 4vh;
+      min-width: 150px;
+    }
+    @media #{$sm-height} {
+      .tp-body--main,
+      .btn.btn--primary-dark {
+        font-size: 3vh;
+      }
+    }
+    @media #{$xs-height} {
+      p {
+        margin: 1rem 0;
+      }
+      .tp-body--main,
+      .btn.btn--primary-dark {
+        font-size: 1rem;
+      }
+    }
+    @media #{$xs} {
+      p {
+        margin: 1em 0;
+      }
+      .tp-body--main,
+      .btn.btn--primary-dark {
+        font-size: 5vw;
+      }
+      .btn.btn--center {
+        margin-top: 7.5vw;
+      }
+      
+    }
+  }
+}

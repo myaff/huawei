@@ -1,0 +1,11 @@
+.interview {
+  &__heading {
+    @include absolute(top 380px left 670px);
+  }
+  &__name {
+    letter-spacing: 0.02em;
+  }
+  &__photo {
+    
+  }
+}

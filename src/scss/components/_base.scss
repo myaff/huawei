@@ -1,0 +1,83 @@
+html, body, div, header, footer, section, article {
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0;
+}
+
+html, body {
+  font: #{$font-size--base} / #{$line-height--base} $font--base;
+  color: $color--base;
+  background: $body-bg;
+  @media #{$xs} {
+    background: $body-bg--mobile;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.layout {
+  width: 100vw;
+  .no-touch & {
+    padding-right: $scroll-width;
+  }
+  
+  &--home {
+    background: url('../img/home-bg.jpg') top center no-repeat;
+    //background-size: contain;
+  }
+}
+
+.page {
+  overflow: hidden;
+  //min-height: calc(100vh - 5.5rem);
+  &__header {
+    background: url('../img/page-bg.jpg') top center no-repeat;
+    min-height: 820px;
+    color: $color--alt;
+  }
+  &__heading [class*="tp-heading--"],
+  &__heading-text [class*="tp-body--"] {
+    color: inherit;
+  }
+  &__heading [class*="tp-heading--"] {
+    font-weight: 300;
+  }
+  &__heading .tp-heading--huge {
+    font-size: 80px;
+    line-height: 0.9;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  &__heading .tp-heading--large {
+    font-size: 52px;
+    line-height: 1;
+  }
+  &__heading-text .tp-body--medium {
+    letter-spacing: 0.09em;
+  }
+  .layout--landing &__img {
+    @include absolute(top 233px left 562px);
+  }
+}
+
+.container {
+  @include center-block;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 1.25rem;
+}
+
+.hidden {
+  display: none!important;
+}
+.invisible {
+  visibility: hidden;
+}
