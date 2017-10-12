@@ -4,11 +4,16 @@
     <div class="modal__content">
       <nav class="nav tp-text--center">
         <ul class="nav__list">
-          <li class="nav__item"><a href="index.php" class="nav__link">Главная</a></li>
-          <li class="nav__item"><a href="test.php" class="nav__link disabled">Тест</a></li>
-          <li class="nav__item"><a href="sarapultseva.php" class="nav__link">Лена Сарапульцева</a></li>
-          <li class="nav__item"><a href="zemlianoy.php" class="nav__link">Антон Земляной</a></li>
-          <li class="nav__item"><a href="borisov.php" class="nav__link">Катрин Борисов</a></li>
+          <?php foreach ($pages as $link) { ?>
+            <?php if ($currentPage !== $link['url']) { ?>
+              <li class="nav__item"><a href="<?=$link['url'];?>" class="nav__link<?php if (!$link['active']) { ?> disabled<?php } ?>"><?=$link['title'];?></a></li>
+            <?php } ?>
+          <?php } ?>
+          <?php foreach ($interviews as $link) { ?>
+            <?php if ($currentPage !== $link['url']) { ?>
+              <li class="nav__item"><a href="<?=$link['url'];?>" class="nav__link<?php if (!$link['active']) { ?> disabled<?php } ?>"><?=$link['name'];?></a></li>
+            <?php } ?>
+          <?php } ?>
         </ul>
       </nav>
       <div class="modal__socials social">

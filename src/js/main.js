@@ -5,7 +5,7 @@ let Modal = require("./components/modal");
 let Anchor = require("./components/anchor");
 //let Input = require("./components/input");
 //let Select = require("./components/select");
-//let Animation = require("./components/animation");
+let Animation = require("./components/animation");
 
 $(document).ready(function(){
   
@@ -16,7 +16,7 @@ $(document).ready(function(){
   Anchor.init();
   //Input.init();
   //Select.init();
-  //Animation.init();
+  Animation.init();
   
 });
 
@@ -31,7 +31,8 @@ module.exports = {
    Togglers,
    Carousel,
    Modal,
-   Anchor
+   Anchor,
+   Animation
    //Input,
    //Select
 };

@@ -24,7 +24,17 @@
     .modal__socials & {
       padding: 0.625rem;
       border-radius: 50%;
-      border: 1px solid currentColor;
+      color: $color--base;
+      border: 1px solid $color--base;
+      background: transparent;
+      
+      &:hover,
+      &:focus,
+      &:active {
+        background: $color--base;
+        color: $color--alt;
+        opacity: 1;
+      }
     }
     
     @media #{$xs} {
@@ -37,6 +47,11 @@
     &:active {
       color: inherit;
       text-decoration: none;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 0.6;
     }
   
     & + & {

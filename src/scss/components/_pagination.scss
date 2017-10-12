@@ -12,6 +12,11 @@
     position: relative;
     display: block;
     text-decoration: none;
+    transition: color 0.2s;
+    
+    &:hover {
+      color: rgba($color--link, 0.6);
+    }
     
     .icon {
       @include absolute(top 0.5rem);

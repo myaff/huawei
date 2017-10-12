@@ -31,6 +31,7 @@ build
 ##Таски
 ```gulp clean``` - удаление папки build  
 ```gulp build``` - сначала запускается clean, затем таски по сборке проекта  
+```gulp markup``` - отдельная задача для генерации html из php
 ```gulp webserver``` - запускает browsersync  
 ```gulp sassdoc``` - генерирует документацию к sass (аннотация http://sassdoc.com/annotations/)   
 ```gulp jsdoc``` - генерирует документацию к JS (аннотация http://usejsdoc.org/)  

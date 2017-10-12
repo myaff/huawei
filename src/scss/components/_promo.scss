@@ -1,5 +1,15 @@
 .promo {
   height: 595px;
-  background: url('../img/huawei.jpg') center no-repeat;
-  padding-top: 220px;
+  background: url('../img/promo-bg.jpg') left center no-repeat;
+  transition: background-position-x 1s;
+  &.animate {
+    background-position-x: 80%;
+  }
+  
+  &__text {
+    margin-top: 120px;
+  }
+  &__note {
+    margin-right: -2.5rem;
+  }
 }

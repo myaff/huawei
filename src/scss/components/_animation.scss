@@ -23,6 +23,30 @@
         transform: translateY(0);
       }
     }
+    &-fade-slide-left {
+      .is-animating & {
+        opacity: 0;
+        transform: translateX(2rem);
+        transition: transform 0.3s, opacity 0.3s;
+      }
+      
+      .is-animating .animate > & {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    &-fade-slide-right {
+      .is-animating & {
+        opacity: 0;
+        transform: translateX(-2rem);
+        transition: transform 0.3s, opacity 0.3s;
+      }
+      
+      .is-animating .animate > & {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
     
     &-ordered {
       @for $i from 0 through 5 {
@@ -34,7 +58,7 @@
     
     &-delay {
       @for $i from 0 through 5 {
-        &-#{$i} {
+        .is-animating &-#{$i} {
           transition-delay: 0.3s * $i;
         }
       }

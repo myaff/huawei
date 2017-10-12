@@ -43,7 +43,7 @@ const path = {
         svg: 'src/svg/*.svg',
         img: ['src/images/**/*.*', '!src/images/**/*-min.*', '!src/images/**/*.zip'],
         imgMin: 'src/images/**/*-min.*',
-        markup: ['*.php', 'mobile/*.php']
+        markup: '*.php'/*, 'mobile/*.php']*/
     },
     watch: {
         js: 'src/js/components/*.js',
@@ -143,12 +143,16 @@ gulp.task('svg:build', function(){
 
 gulp.task('markup:build', function() {
     return gulp.src(path.src.markup)
-               .pipe(php2html())
+               .pipe(php2html({
+                 requestHost: 'localhost/huawei'
+               }))
                .pipe(gulp.dest(path.build.markup));
 });
 gulp.task('markup', function() {
     gulp.src(path.src.markup)
-        .pipe(php2html())
+        .pipe(php2html({
+          requestHost: 'localhost/huawei'
+        }))
         .pipe(gulp.dest(path.build.markup));
 });
 
@@ -212,7 +216,7 @@ gulp.task('sassdoc', function () {
 });
 
 
-gulp.task('build', gulp.parallel('css:build', 'assets:build', 'svg:build', 'js:build', 'image:build', 'webpack'));
+gulp.task('build', gulp.parallel('css:build', 'assets:build', 'svg:build', 'js:build', 'image:build', 'markup:build', 'webpack'));
 
 gulp.task('webserver', function(){
      browserSync.init({

@@ -1,18 +1,18 @@
 $btn-border-radius: 5px;
 $btn-color: #231815;
-$btn-border-color: currentColor;
+$btn-border-color: #231815;;
 $btn-bg: transparent;
 
-$btn-color--hover: $btn-color;
+$btn-color--hover: $color--alt;
 $btn-border-color--hover: $btn-border-color;
-$btn-bg--hover: $btn-bg;
+$btn-bg--hover: $btn-color;
 
-$btn-alt-color: white;
-$btn-alt-border-color: currentColor;
+$btn-alt-color: $color--alt;
+$btn-alt-border-color: $color--alt;
 $btn-alt-bg: transparent;
 
-$btn-alt-color--hover: $btn-alt-color;
-$btn-alt-border-color--hover: $btn-alt-border-color;
+$btn-alt-color--hover: rgba($btn-alt-color, 0.8);
+$btn-alt-border-color--hover: rgba($btn-alt-border-color, 0.8);
 $btn-alt-bg--hover: $btn-alt-bg;
 
 .btn {

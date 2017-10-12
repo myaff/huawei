@@ -1,5 +1,5 @@
 $nav-color: black;
-$nav-color--hover: $nav-color;
+$nav-color--hover: rgba($nav-color, 0.6);
 
 .nav {
   position: relative;
@@ -40,6 +40,7 @@ $nav-color--hover: $nav-color;
     font: 2rem/1 $font--accent;
     padding: 1.25rem;
     color: $nav-color;
+    trasition: color 0.2s;
     
     @media #{$sm-height} {
       font-size: 1.5rem;
