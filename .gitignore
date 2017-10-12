@@ -90,5 +90,4 @@ build/*
 mobile/*
 src/images/*
 src/assets/*
-src/js/*
 src/svg/*
