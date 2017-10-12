@@ -17,6 +17,7 @@ function init(){
     navText: ['', ''],
     dots: false,
     loop: true,
+    lazyLoad: true,
     mouseDrag: false,
     animateOut: 'fadeOut'
   });

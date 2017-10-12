@@ -31,7 +31,9 @@ body {
   
   &--home {
     background: url('../img/home-bg.jpg') top center no-repeat;
-    //background-size: contain;
+    @media #{$home-height} {
+      background-position-y: 15%;
+    }
   }
 }
 

@@ -122,8 +122,9 @@
       <div class="grid-center mt-3 kb-9">
         <div class="col-10 slider-wrapper">
           <div class="slider owl-carousel mx-auto">
-            <img src="<?=$root;?>build/img/borisov/slider_01.jpg" alt="">
-            <img src="<?=$root;?>build/img/borisov/slider_01.jpg" alt="">
+            <?php for ($i = 1; $i <= 4; $i++) { ?>
+              <img src="<?=$root.'build/img/borisov/slider-0'.$i.'.jpg'?>" class="owl-lazy" />
+            <?php } ?>
           </div>
         </div>
       </div>

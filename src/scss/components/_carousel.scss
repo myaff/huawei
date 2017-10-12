@@ -40,6 +40,10 @@
       top: 450px;
       left: auto;
       right: 0;
+      
+      @media #{$home-height} {
+        top: 420px;
+      }
     }
     .owl-prev {
       display: none;

@@ -103,6 +103,7 @@ $grid-breakpoints: (
 ) !default;
 
 $sm-height: 'screen and (max-height: 799px)';
+$home-height: 'screen and (min-height: 630px) and (max-height: 820px)';
 $xs-height: 'screen and (max-height: 599px)';
 $min-animation: 'screen and (min-width: 64rem)';
 $md-landing: 'screen and (max-width: 68.75rem)';

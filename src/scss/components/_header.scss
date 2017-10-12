@@ -1,8 +1,19 @@
 .header {
   z-index: $z-index--header;
-  height: $header-height;
+  @include size(100%, $header-height);
   background: $header-bg;
   color: $header-color;
+  
+  .layout--landing & {
+    @include fixed(top 0 left 0);
+    width: 100vw;
+    background: $body-bg;
+    padding-right: $scroll-width;
+    
+    & + .page {
+      padding-top: $header-height;
+    }
+  }
   
   &__content {
     display: flex;

@@ -1,11 +1,36 @@
 .interview {
   &__heading {
     @include absolute(top 380px left 670px);
+    @media #{$home-height} {
+      .tp-heading--large {
+        font-size: 4.15vh;
+      }
+      .tp-body--wide {
+        font-size: 2.2vh;
+      }
+    }
+  }
+  &__link.btn {
+    @media #{$home-height} {
+      margin-top: 2vh!important;
+      font-size: 1.71vh;
+      padding: 1.46vh 3.9vh;
+    }
   }
   &__name {
     letter-spacing: 0.02em;
   }
   &__photo {
-    
+    @media #{$home-height} {
+      width: 62%;
+      margin-left: auto;
+      margin-right: 38%;
+      img {
+        width: auto;
+        height: 78vh;
+        margin-right: 0;
+        margin-left: auto;
+      }
+    }
   }
 }

@@ -3,10 +3,24 @@
     margin-top: -1 * $header-height;
     padding-top: 20px;
     margin-bottom: -2rem;
+    
+    @media #{$home-height} {
+      height: calc(100vh - 56px);
+      margin-bottom: 0;
+    }
   }
   &--home &__img,
   &--home &__heading {
     margin-left: 210px;
+  }
+  &--home &__img {
+    @media #{$home-height} {
+      height: 3vh;
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
   }
   &--home &__text {
     @include absolute(top 130px left 565px);
@@ -19,6 +33,16 @@
     .tp-body--base {
       line-height: 1.88em;
       letter-spacing: 0.1em;
+      @media #{$home-height} {
+        font-size: 1.95vh;
+      }
+    }
+  }
+  &--home &__heading {
+    @media #{$home-height} {
+      &.tp-heading--huge {
+        font-size: 8.29vh;
+      }
     }
   }
 }
