@@ -2,10 +2,22 @@
 <!-- Generator: Adobe Illustrator 16.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="&#x421;&#x43B;&#x43E;&#x439;_1"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32.988px"
-	 height="43.992px" viewBox="0 0 32.988 43.992" style="enable-background:new 0 0 32.988 43.992;" xml:space="preserve">
-<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#605ca8;" d="M1,43.992l-1-1.047l20.989-21.996l1,1.047L1,43.992z"/>
-<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#605ca8;" d="M0,1.048L1,0l20.989,21.996l-1,1.048L0,1.048z"/>
-<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#605ca8;" d="M11.999,43.992L11,42.945l20.989-21.996l1,1.047L11.999,43.992z"/>
-<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#605ca8;" d="M11,1.048L11.999,0l20.989,21.996l-1,1.048L11,1.048z"/>
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="228px" height="76px"
+	 viewBox="-97.506 -16.004 228 76" style="enable-background:new -97.506 -16.004 228 76;" xml:space="preserve">
+<g>
+	<polygon style="fill:#605CA8;" points="2.92,0 1.92,1.048 21.91,21.997 1.92,42.945 2.92,43.992 23.91,21.996 	"/>
+	<polygon style="fill:#605CA8;" points="33.974,21.017 13.919,0 12.92,1.048 32.91,21.997 12.92,42.945 13.919,43.992 34.91,21.996 
+			"/>
+</g>
+<g>
+	<polygon style="fill:#605CA8;" points="-73.586,-0.25 -74.586,0.798 -54.595,21.747 -74.586,42.695 -73.586,43.742 -52.596,21.746 
+			"/>
+	<polygon style="fill:#605CA8;" points="-42.532,20.767 -62.587,-0.25 -63.586,0.798 -43.596,21.747 -63.586,42.695 -62.587,43.742 
+		-41.596,21.746 	"/>
+</g>
+<g>
+	<polygon style="fill:#605CA8;" points="78.269,0 77.269,1.048 97.26,21.997 77.269,42.945 78.269,43.992 99.26,21.997 	"/>
+	<polygon style="fill:#605CA8;" points="109.324,21.017 89.269,0 88.269,1.048 108.26,21.998 88.269,42.945 89.269,43.992 
+		110.26,21.997 	"/>
+</g>
 </svg>

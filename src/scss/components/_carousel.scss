@@ -62,9 +62,9 @@
       display: none;
     }
     .owl-next {
-      background: url('../img/arrow-double.svg') -50% center repeat-x;
+      background: url('../img/arrow-double.svg') left center repeat-x;
       background-clip: content-box;
-      background-size: 4.75rem 2.75rem;
+      background-size: cover;
       @include absolute(top 0 right 7.5rem);
       @include size(4.75rem);
       border-radius: 50%;
@@ -118,17 +118,17 @@
 }
 @keyframes bg-pos {
   from {
-    background-position-x: -50%;
+    background-position-x: 0%;
   }
   to {
-    background-position-x: -1310%;
+    background-position-x: -50%;
   }
 }
 @keyframes bg-pos--forward {
   from {
-    background-position-x: -1310%;
+    background-position-x: -50%;
   }
   to {
-    background-position-x: -2580%;
+    background-position-x: -100%;
   }
 }
