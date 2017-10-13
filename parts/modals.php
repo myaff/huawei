@@ -17,7 +17,7 @@
         </ul>
       </nav>
       <div class="modal__socials social">
-        <div class="social__title">Поделиться проектом в социальных сетях:</div>
+        <div class="social__title">Поделиться проектом в&nbsp;социальных сетях:</div>
         <a href="#" class="social__link" target="_blank" data-type="fb">
           <svg class="icon social__icon">
             <use xlink:href="#facebook"/>

@@ -1,4 +1,4 @@
-.pagination {
+.layout--desktop .pagination {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,6 +44,35 @@
       .icon {
         right: -1rem;
       }
+    }
+  }
+}
+.layout--mobile .pagination {
+  color: $color--link;
+  
+  &__text,
+  &__link,
+  [class*="tp-heading--"],
+  [class*="tp-body--"] {
+    color: inherit;
+  }
+  &__text {
+    font-weight: bold;
+  }
+  &__link {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    .tp-heading--big {
+      font-size: 28px;
+    }
+    
+    .icon {
+      font-size: $font-size--main;
+      display: block;
+      margin-right: 0.5rem;
     }
   }
 }

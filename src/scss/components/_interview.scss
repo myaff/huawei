@@ -1,13 +1,16 @@
-.interview {
+.layout--desktop .interview {
   &__heading {
     @include absolute(top 380px left 670px);
     @media #{$home-height} {
       .tp-heading--large {
         font-size: 4.15vh;
       }
-      .tp-body--wide {
+      .interview__position {
         font-size: 2.2vh;
       }
+    }
+    @media screen and (min-height: 630px) and (max-height: 700px) {
+      top: 360px;
     }
   }
   &__link.btn {

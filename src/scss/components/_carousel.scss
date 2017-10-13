@@ -5,11 +5,17 @@
 //@import 'owl.carousel/video';
 
 .owl-nav {
-  @include absolute(top 50% left 0);
   @include size(100%, 4.75rem);
   display: flex;
   justify-content: space-between;
-  margin-top: -2.375rem;
+  .layout--desktop & {
+    @include absolute(top 50% left 0);
+    margin-top: -2.375rem;
+  }
+  .layout--mobile & {
+    justify-content: center;
+    margin-top: 10px;
+  }
 }
 .owl-prev,
 .owl-next {
@@ -18,6 +24,10 @@
   background-position: center;
   transition: opacity 0.2s;
   border: 2px solid #959595;
+  
+  .layout--mobile & {
+    margin: 0 0.5rem;
+  }
   
   &.disabled {
     opacity: 0.15;
@@ -32,7 +42,7 @@
 
 .carousel {
   $nav-color: #605ca8;
-  &--home {
+  .layout--desktop &--home {
     margin-left: -224px;
     width: calc(100% + 224px);
     
@@ -45,6 +55,8 @@
         top: 420px;
       }
     }
+  }
+  &--home {
     .owl-prev {
       display: none;
     }
@@ -86,9 +98,20 @@
         line-height: normal;
         font-weight: bold;
         text-decoration: underline;
+        text-align: left;
+        letter-spacing: 0.07em;
         @include absolute(top 1rem left 6rem);
         background: transparent;
       }
+    }
+  }
+  .layout--mobile &--home {
+    .owl-nav {
+      margin-top: 1.5rem;
+    }
+    .owl-next {
+      margin: 0;
+      left: 3.5rem;
     }
   }
 }

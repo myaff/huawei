@@ -13,7 +13,7 @@
 <body>
 <div class="svg-placeholder hidden"></div>
 <script>$('.svg-placeholder').html(SVG_SPRITE);</script>
-<div class="layout <?php if($mainPage){?>layout--home<?php } else {?>layout--landing<?php } ?>">
+<div class="layout layout--desktop <?php if($mainPage){?>layout--home<?php } else {?>layout--landing<?php } ?>">
 <div class="header">
 	<div class="header__content">
 	  <div class="btn-menu__wrapper">

@@ -1,11 +1,11 @@
 .page {
-  &--ls {
+  .layout--desktop &--ls {
     margin-bottom: -95px;
   }
-  &--ls &__content {
+  .layout--desktop &--ls &__content {
   margin-top: -160px;
   }
-  &--ls .slider {
+  .layout--desktop &--ls .slider {
     width: 780px;
     padding: 0 100px;
   }

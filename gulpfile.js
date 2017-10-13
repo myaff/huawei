@@ -33,7 +33,8 @@ const path = {
         css: 'build/css/',
         assets: 'build/assets/',
         img: 'build/img',
-        markup: './'
+        markup: './',
+        markupM: 'mobile/'
     },
     src: {
         js: 'src/js/main.js',
@@ -43,7 +44,8 @@ const path = {
         svg: 'src/svg/*.svg',
         img: ['src/images/**/*.*', '!src/images/**/*-min.*', '!src/images/**/*.zip'],
         imgMin: 'src/images/**/*-min.*',
-        markup: '*.php'/*, 'mobile/*.php']*/
+        markup: '*.php',
+        markupM: 'mobile/*.php'
     },
     watch: {
         js: 'src/js/components/*.js',
@@ -154,6 +156,11 @@ gulp.task('markup', function() {
           requestHost: 'localhost/huawei'
         }))
         .pipe(gulp.dest(path.build.markup));
+    gulp.src(path.src.markupM)
+        .pipe(php2html({
+          requestHost: 'localhost/huawei'
+        }))
+        .pipe(gulp.dest(path.build.markupM));
 });
 
 gulp.task('webpack', function(callback){

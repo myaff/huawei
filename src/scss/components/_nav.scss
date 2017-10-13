@@ -5,6 +5,10 @@ $nav-color--hover: rgba($nav-color, 0.6);
   position: relative;
   margin: 0 0 10vh;
   padding-top: 3.5rem;
+  
+  @media #{$xs} {
+    padding-top: 1rem;
+  }
 
   &::after {
     content: '';
@@ -19,7 +23,7 @@ $nav-color--hover: rgba($nav-color, 0.6);
       bottom: -1.5rem;
     }
     @media #{$xs} {
-      bottom: -10.5vw;
+      bottom: -5.5vw;
     }
   }
 
@@ -51,7 +55,7 @@ $nav-color--hover: rgba($nav-color, 0.6);
     }
     
     @media #{$xs} {
-      padding: 7.5vw 0;
+      padding: 5.6vw 0;
       font-size: 9vw;
     }
     

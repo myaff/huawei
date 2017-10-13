@@ -12,12 +12,12 @@
       <a href="" class="btn btn--alt mt-3">Пройти тест</a>
     </div>
     <div class="owl-carousel carousel--home">
-      <?php foreach ($interviews as $interview) { ?>
+      <?php foreach ($interviews as $key => $interview) { ?>
         <div class="carousel__item interview<?php if (!$interview['active']) { ?> disabled<?php } ?>">
-          <div class="interview__photo"><img src="<?=$interview['img'];?>"/></div>
+          <div class="interview__photo"><img src="<?=$root?>build/img/home/<?=$interview['img'];?>"/></div>
           <div class="interview__heading">
             <div class="interview__name tp-heading--large"><?=$interview['name'];?></div>
-            <div class="interview__position tp-body--wide"><?=$interview['position'];?></div>
+            <div class="interview__position <?php if ($key === 'kb'){ ?>tp-body--main<?php }else{ ?>tp-body--wider<?php } ?>"><?=$interview['position'];?></div>
             <a href="<?=$interview['url'];?>" class="interview__link btn mt-4">Читать интервью</a>
           </div>
         </div>

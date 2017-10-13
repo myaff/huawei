@@ -1,4 +1,4 @@
-$modal-overlay-bg: $body-bg;
+$modal-overlay-bg: #eaeaea;
 $modal-bg: transparent;
 
 $modal-overlay-bg--aside: #fff;
@@ -118,7 +118,7 @@ $modal-height: 100vh;
     z-index: $z-index--modal + 1;
     
     @media #{$xs} {
-      top: 3.13vw;
+      top: 10px;
     }
   }
   

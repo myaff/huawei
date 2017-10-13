@@ -1,11 +1,11 @@
 .page {
-  &--az {
+  .layout--desktop &--az {
     margin-bottom: -88px;
   }
-  &--az &__content {
+  .layout--desktop &--az &__content {
     margin-top: -155px;
   }
-  &--az + .footer {
+  .layout--desktop &--az + .footer {
     padding-bottom: 3.5rem;
   }
 }

@@ -1,5 +1,5 @@
 .page {
-  &--home {
+  .layout--desktop &--home {
     margin-top: -1 * $header-height;
     padding-top: 20px;
     margin-bottom: -2rem;
@@ -9,11 +9,15 @@
       margin-bottom: 0;
     }
   }
-  &--home &__img,
-  &--home &__heading {
+  .layout--mobile &--home {
+    background: url('../img/m-home-bg.jpg') top center no-repeat;
+    padding-bottom: 1.5rem;
+  }
+  .layout--desktop &--home &__img,
+  .layout--desktop &--home &__heading {
     margin-left: 210px;
   }
-  &--home &__img {
+  .layout--desktop &--home &__img {
     @media #{$home-height} {
       height: 3vh;
       img {
@@ -22,7 +26,7 @@
       }
     }
   }
-  &--home &__text {
+  .layout--desktop &--home &__text {
     @include absolute(top 130px left 565px);
   }
   &--home &__heading,

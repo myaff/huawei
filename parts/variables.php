@@ -2,6 +2,9 @@
 $mainPage = false;
 $pathArr = explode('/', $_SERVER['REQUEST_URI']);
 $root = '';
+if(preg_match('/mobile\//', $_SERVER['REQUEST_URI'])){
+  $root = '../';
+}
 $currentPage = end($pathArr);
 if(strpos($_SERVER['REQUEST_URI'], '/index.php') || preg_match('/huawei\/$/', $_SERVER['REQUEST_URI']) || $currentPage === 'index.php'){
 	$mainPage = true;
@@ -11,21 +14,21 @@ $interviews = [
     'name' => 'Катрин Борисов',
     'position' => 'арт-директор галереи RuArts',
     'url' => 'borisov.php',
-    'img' => 'build/img/home/borisov.png',
+    'img' => 'borisov.png',
     'active' => true
   ],
   'az' => [
     'name' => 'Антон Земляной',
     'position' => 'fashion-фотограф',
     'url' => 'zemlianoy.php',
-    'img' => 'build/img/home/zemlianoy.png',
+    'img' => 'zemlianoy.png',
     'active' => true
   ],
   'ls' => [
     'name' => 'Лена Сарапульцева',
     'position' => 'fashion-фотограф',
     'url' => 'sarapultseva.php',
-    'img' => 'build/img/home/sarapultseva.png',
+    'img' => 'sarapultseva.png',
     'active' => true
   ]
 ];

@@ -12,6 +12,10 @@ p {
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: 0.12em;
+    .layout--mobile & {
+      font-size: 48px;
+      line-height: 60px;
+    }
   }
   &--large {
     @include heading {
@@ -68,8 +72,13 @@ p {
   }
   &--wide {
     font-size: $font-size--main;
-    line-height: 1.25;
-    letter-spacing: 0.01em;
+    line-height: 1.67;
+    letter-spacing: 0.07em;
+  }
+  &--wider {
+    font-size: $font-size--main;
+    line-height: 1.67;
+    letter-spacing: 0.2em;
   }
   &--small {
     font-size: $font-size--small;
@@ -78,6 +87,12 @@ p {
   
 }
 
+.tp--uc {
+  text-transform: uppercase!important;
+}
+.tp--lc {
+  text-transform: lowercase!important;
+}
 
 .tp-text {
   @each $align in (left, right, center) {
@@ -99,36 +114,24 @@ p {
 }
 
 .img-wrapper {
-  width: 34.325rem;
-  
-  @media #{$md-landing} {
-    width: 47.73vw;
-  }
-  
-  
-  &--big {
-    width: 38.75rem;
-    
-    @media #{$md-landing} {
-      width: 53.88vw;
-    }
-  }
-  &, &--big {
-    @media #{$xs} {
-      width: 100vw;
-      margin-left: calc(-1 * (100vw - 100%) / 2);
-      margin-right: calc(-1 * (100vw - 100%) / 2);
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-  }
-  
   &::after {
     content: '';
     display: block;
     clear: both;
+  }
+  .layout--mobile & {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
+.slider-wrapper {
+  .layout--mobile & {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .layout--mobile & .slider {
+    width: 100%;
+    padding: 0;
   }
 }
 

@@ -14,9 +14,6 @@ html, body {
   font: #{$font-size--base} / #{$line-height--base} $font--base;
   color: $color--base;
   background: $body-bg;
-  @media #{$xs} {
-    background: $body-bg--mobile;
-  }
 }
 
 body {
@@ -29,7 +26,7 @@ body {
     padding-right: $scroll-width;
   }
   
-  &--home {
+  &--home.layout--desktop {
     background: url('../img/home-bg.jpg') top center no-repeat;
     @media #{$home-height} {
       background-position-y: 15%;
@@ -40,10 +37,24 @@ body {
 .page {
   overflow: hidden;
   //min-height: calc(100vh - 5.5rem);
-  &__header {
+  .layout--desktop &__header {
     background: url('../img/page-bg.jpg') top center no-repeat;
     min-height: 820px;
     color: $color--alt;
+  }
+  .layout--mobile &__header {
+    background: $color--primary;
+    color: $color--alt;
+    padding-top: 60px;
+    margin-bottom: -1px;
+    &::before {
+      content: '';
+      display: block;
+      @include size(0);
+      @include absolute(top -50px left 0);
+      border-bottom: 50px solid $color--primary;
+      border-right: 320px solid transparent;
+    }
   }
   &__heading [class*="tp-heading--"],
   &__heading-text [class*="tp-body--"] {
@@ -53,19 +64,32 @@ body {
     font-weight: 300;
   }
   &__heading .tp-heading--huge {
-    font-size: 80px;
     line-height: 0.9;
     letter-spacing: 0;
     text-transform: none;
+    .layout--desktop & {
+      font-size: 80px;
+    }
+    .layout--mobile & {
+      font-size: 45px;
+    }
   }
   &__heading .tp-heading--large {
-    font-size: 52px;
     line-height: 1;
+    .layout--desktop & {
+      font-size: 52px;
+    }
+    .layout--mobile & {
+      font-size: 40px;
+    }
   }
   &__heading-text .tp-body--medium {
     letter-spacing: 0.09em;
+    .layout--mobile & {
+      line-height: 2rem;
+    }
   }
-  .layout--landing &__img {
+  .layout--desktop.layout--landing &__img {
     @include absolute(top 233px left 562px);
   }
 }
@@ -74,7 +98,12 @@ body {
   @include center-block;
   width: 100%;
   max-width: 1000px;
-  padding: 0 1.25rem;
+  .layout--desktop & {
+    padding: 0 1.25rem;
+  }
+  .layout--mobile & {
+    padding: 0 10px;
+  }
 }
 
 .hidden {

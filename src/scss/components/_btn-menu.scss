@@ -18,7 +18,7 @@
     @include size(100%);
   }
   
-  &__wrapper {
+  .layout--desktop &__wrapper {
     @include absolute(top 0 left 0);
     line-height: 1;
     @media #{$xl} {
@@ -27,6 +27,13 @@
     @media #{$xxl} {
       left: -130px;
     }
+  }
+  .layout--mobile &__wrapper {
+    @include fixed(top 0 left 0);
+  }
+  .layout--mobile & {
+    @include size(2.5rem);
+    padding: 0.25rem;
   }
   
 }
