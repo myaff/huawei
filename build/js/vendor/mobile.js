@@ -9,11 +9,22 @@ function isMobile() {
 }
 
 if(isMobile() === true) {
-    let hash = window.location.hash;
+    var origin =  window.location.origin,
+        path = window.location.pathname;
 
-    if (hash) {
-        window.location  = '/mobile'+hash;
+    if(path.indexOf(".html") > -1 || path.indexOf(".php") > -1) {
+        var parts = path.split("/"),
+            page = parts[parts.length - 1],
+            pathPart = parts.slice(0, -1).join('/');
+
+        if (parts.length > 2){
+            pathPart = parts.slice(0, -1).join('/');
+
+            window.location  = origin + pathPart + '/mobile/' + page;
+        } else {
+            window.location  = origin + '/mobile/' + page;
+        }
     } else {
-        window.location  = '/mobile';
+        window.location  = origin + path + 'mobile';
     }
 }
