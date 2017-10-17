@@ -7,7 +7,7 @@
   <link href="../build/css/main.css" rel="stylesheet">
   <script src="../build/js/vendor/jquery-3.1.1.slim.min.js"></script>
   <script src="../build/img/svg/sprite.js"></script>
-  <title>Huawei</title>
+  <title>Профессионалы тестируют камеру смартфона Huawei nova 2</title>
 </head>
 <body>
 <div class="svg-placeholder hidden"></div>
@@ -21,7 +21,7 @@
 	    </button>
 	  </div>
 	  <div class="header__logo logo logo--huawei">
-      <a href="#" class="logo__link" target="_blank">
+      <a href="https://shop.huawei.ru/huawei-nova-2?utm_source=mc&utm_medium=article&utm_term=&utm_content=&utm_campaign=2017Q3_nova2_SP_MC" class="logo__link" target="_blank">
         <img src="../build/img/m-logo-huawei.png" alt="Huawei" />
       </a>
 	  </div>
@@ -68,7 +68,7 @@
         </div>
       </div>
       <div class="slider-wrapper mt-3">
-        <div class="slider owl-carousel">
+        <div class="slider owl-carousel carousel--default">
                       <img src="../build/img/sarapultseva/slider-01_m.jpg" class="owl-lazy" />
                       <img src="../build/img/sarapultseva/slider-02_m.jpg" class="owl-lazy" />
                       <img src="../build/img/sarapultseva/slider-03_m.jpg" class="owl-lazy" />
@@ -189,7 +189,7 @@
         <div class="promo__logo mt-5">
           <img src="../build/img/promo-logo.png" alt="">
         </div>
-        <a href="#" class="btn mt-4">узнать больше</a>
+        <a href="https://shop.huawei.ru/huawei-nova-2?utm_source=mc&utm_medium=article&utm_term=&utm_content=&utm_campaign=2017Q3_nova2_SP_MC" class="btn mt-4" target="_blank">узнать больше</a>
         <div class="promo__phones mt-5">
           <img src="../build/img/m-promo-phones.png" alt="Huawei Nova 2">
         </div>
@@ -208,7 +208,7 @@
       <nav class="nav tp-text--center">
         <ul class="nav__list">
                                     <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
-                                                <li class="nav__item"><a href="test.html" class="nav__link disabled">Тест</a></li>
+                                                <li class="nav__item"><a href="test.html" class="nav__link">Тест</a></li>
                                                           <li class="nav__item"><a href="borisov.html" class="nav__link">Катрин Борисов</a></li>
                                                 <li class="nav__item"><a href="zemlianoy.html" class="nav__link">Антон Земляной</a></li>
                                                     </ul>
@@ -229,6 +229,52 @@
           <svg class="icon social__icon">
             <use xlink:href="#twitter"/>
           </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal__wrapper modal__wrapper--trans invisible">
+  <div id="test-correct" class="modal modal--big invisible" data-fullscreen></div>
+  <div id="test-incorrect" class="modal modal--big invisible" data-fullscreen></div>
+</div>
+<div class="modal__wrapper modal__wrapper--dark invisible">
+  <div id="test-result" class="modal modal--dark modal--result invisible" data-fullscreen>
+    <button class="btn-close js-modal" data-target="#test-result"></button>
+    <div class="modal__content">
+      <div class="modal__result result tp-text--center pt-4">
+        <div class="result__title tp--uc">Вы угадали</div>
+        <div id="sum" class="result__sum tp--uc my-3 mx-auto"></div>
+        <div class="result__total tp--uc"> из <span id="total"></span></div>
+        <button class="btn btn--alt btn--center my-5 js-test-reset">попробовать еще</button>
+      </div>
+      <div class="modal__socials">
+        <div class="social social--inline">
+  <div class="social__title">Поделитьcя</div>
+  <div class="social__delimiter"></div>
+  <a href="#" class="social__link" target="_blank" data-type="fb">
+    <svg class="icon social__icon">
+      <use xlink:href="#facebook"/>
+    </svg>
+    <span class="social__text">Facebook</span>
+  </a>
+  <a href="#" class="social__link" target="_blank" data-type="vk">
+    <svg class="icon social__icon">
+      <use xlink:href="#vk"/>
+    </svg>
+    <span class="social__text">Vkontakte</span>
+  </a>
+  <a href="#" class="social__link" target="_blank" data-type="tw">
+    <svg class="icon social__icon">
+      <use xlink:href="#twitter"/>
+    </svg>
+    <span class="social__text">Twitter</span>
+  </a>
+</div>      </div>
+      <div class="modal__footer">
+        <a href="index.html" class="modal__footer-link">
+          <svg class="icon mr-3"><use xlink:href="#arrow-next-thin"/></svg>
+          <span class="text">Читайте о&nbsp;том, как сделать </br>хороший снимок</br>с&nbsp;помощью смартфона</br>в&nbsp;интервью героев </br>проекта</span>
         </a>
       </div>
     </div>

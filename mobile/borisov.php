@@ -90,7 +90,7 @@
         </div>
       </div>
       <div class="slider-wrapper mt-3">
-        <div class="slider owl-carousel">
+        <div class="slider owl-carousel carousel--default">
           <?php for ($i = 1; $i <= 4; $i++) { ?>
             <img src="<?=$root.'build/img/borisov/slider-0'.$i.'_m.jpg'?>" class="owl-lazy" />
           <?php } ?>

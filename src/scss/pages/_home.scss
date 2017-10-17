@@ -28,6 +28,9 @@
   }
   .layout--desktop &--home &__text {
     @include absolute(top 130px left 565px);
+    @media screen and (max-height: 670px) and (min-height: 630px) {
+      top: 100px;
+    }
   }
   &--home &__heading,
   &--home &__text {

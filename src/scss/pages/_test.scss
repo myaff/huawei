@@ -1,0 +1,71 @@
+.page {
+  .layout--desktop &--test {
+    margin-top: -1rem;
+    padding-bottom: 11vh;
+    
+    @media #{$home-height} {
+      height: calc(100vh - 126px);
+    }
+    @media screen and (min-height: 821px) and (max-height: 890px) {
+      padding-bottom: 7vh;
+    }
+  }
+  .layout--mobile &--test {
+    background: url('../img/m-test-bg.jpg') top center no-repeat;
+    padding-bottom: 4rem;
+  }
+  .layout--desktop &--test &__img {
+    @media #{$home-height} {
+      height: 3vh;
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+  &--test &__heading,
+  &--test &__text {
+    color: $color--alt;
+    z-index: 2;
+  }
+  .layout--desktop &--test &__heading {
+    margin-top: 7.8vh;
+    &.tp-heading--huge {
+      font-size: 5rem;
+    }
+    @media #{$home-height} {
+      &.tp-heading--huge {
+        font-size: 9.76vh;
+      }
+    }
+  }
+  .layout--mobile &--test &__heading {
+    //margin-top: 7.8vh;
+    &.tp-heading--huge {
+      font-size: 38px;
+      line-height: 1;
+      font-weight: 300;
+      letter-spacing: initial;
+    }
+  }
+  .layout--desktop &--test &__text {
+    margin-bottom: 3.9vh;
+    @media #{$home-height} {
+      .tp-body--big {
+        font-size: 2.93vh;
+      }
+    }
+  }
+  .layout--mobile & .slider-wrapper {
+    background: $color--primary;
+    padding-bottom: 0.5rem;
+    &::after {
+      content: '';
+      display: block;
+      @include size(0);
+      @include absolute(bottom -30px left 0);
+      border-top: 30px solid $color--primary;
+      border-right: 320px solid transparent;
+    }
+  }
+}

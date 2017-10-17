@@ -17,9 +17,9 @@ var Share = {
                     type:       'vk',    // тип соцсети
                     url:        location.href,  // какую ссылку шарим
                     count_url:  location.href,  // для какой ссылки крутим счётчик
-                    title:      "Специальный проект L'Occitane и Psychologies", // заголовок шаринга
-                    image:      "http://divine.psychologies.ru/share.jpg",             // картинка шаринга
-                    text:       "Пять очаровательных женщин делятся своими секретами.",             // текст шаринга
+                    title:      "Профессионалы тестируют камеру смартфона Huawei nova 2", // заголовок шаринга
+                    image:      "https://olga-grabko.pro/case/huawei/build/img/share.jpg",             // картинка шаринга
+                    text:       "Профессионалы тестируют камеру смартфона Huawei nova 2",             // текст шаринга
                 },
                 $(_element).data(), // Если параметры заданы в data, то читаем их
                 _options            // Параметры из вызова метода имеют наивысший приоритет
@@ -48,9 +48,9 @@ var Share = {
     vk: function(_options) {
         var options = $.extend({
             url:    location.href,
-            title:  "Специальный проект L'Occitane и Psychologies",
-            image:  "http://divine.psychologies.ru/share.jpg",
-            text:   "Пять очаровательных женщин делятся своими секретами.",
+            title:  "Профессионалы тестируют камеру смартфона Huawei nova 2",
+            image:  "https://olga-grabko.pro/case/huawei/build/img/share.jpg",
+            text:   "Профессионалы тестируют камеру смартфона Huawei nova 2",
         }, _options);
 
         return 'http://vkontakte.ru/share.php?'
@@ -65,7 +65,7 @@ var Share = {
     ok: function(_options) {
         var options = $.extend({
             url:    location.href,
-            text:   "Специальный проект L'Occitane и Psychologies",
+            text:   "Профессионалы тестируют камеру смартфона Huawei nova 2",
         }, _options);
 
         return 'http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1'
@@ -77,9 +77,9 @@ var Share = {
     fb: function(_options) {
         var options = $.extend({
             url:    location.href,
-            title:  "Специальный проект L'Occitane и Psychologies",
-            image:  "http://divine.psychologies.ru/share.jpg",
-            text:   "Пять очаровательных женщин делятся своими секретами.",
+            title:  "Профессионалы тестируют камеру смартфона Huawei nova 2",
+            image:  "https://olga-grabko.pro/case/huawei/build/img/share.jpg",
+            text:   "Профессионалы тестируют камеру смартфона Huawei nova 2",
         }, _options);
 
         return 'http://www.facebook.com/sharer.php?s=100'
@@ -107,7 +107,7 @@ var Share = {
     tw: function(_options) {
         var options = $.extend({
             url:        location.href,
-            title:      "Специальный проект L'Occitane и Psychologies",
+            title:      "Профессионалы тестируют камеру смартфона Huawei nova 2",
         }, _options);
 
         return 'http://twitter.com/share?'

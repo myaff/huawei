@@ -9,7 +9,7 @@
         Сможете ли вы узнать среди снимков те, что были сделаны на смартфон?</br>
         Проверьте себя!</p>
       </div>
-      <a href="" class="btn btn--alt mt-3">Пройти тест</a>
+      <a href="test.php" class="btn btn--alt mt-3">Пройти тест</a>
     </div>
     <div class="owl-carousel carousel--home">
       <?php foreach ($interviews as $key => $interview) { ?>

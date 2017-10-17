@@ -3,15 +3,27 @@
  * @module Carousel
  */
 
-let carousel;
 
 /**
  * Инициализация карусели
  */
 function init(){
-  carousel = $(".owl-carousel");
+  let carouselHome = $(".owl-carousel.carousel--home");
+  let carouselDefault = $(".owl-carousel.carousel--default");
 
-  carousel.owlCarousel({
+  carouselHome.owlCarousel({
+    items: 1,
+    nav: true,
+    navText: ['', ''],
+    dots: false,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    lazyLoad: true,
+    mouseDrag: false,
+    animateOut: 'fadeOut'
+  });
+  carouselDefault.owlCarousel({
     items: 1,
     nav: true,
     navText: ['', ''],

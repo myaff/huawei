@@ -8,7 +8,7 @@
         <div class="promo__logo mt-5">
           <img src="<?=$root?>build/img/promo-logo.png" alt="">
         </div>
-        <a href="#" class="btn mt-4">узнать больше</a>
+        <a href="https://shop.huawei.ru/huawei-nova-2?utm_source=mc&utm_medium=article&utm_term=&utm_content=&utm_campaign=2017Q3_nova2_SP_MC" class="btn mt-4" target="_blank">узнать больше</a>
         <div class="promo__phones mt-5">
           <img src="<?=$root?>build/img/m-promo-phones.png" alt="Huawei Nova 2">
         </div>

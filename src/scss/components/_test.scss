@@ -1,0 +1,133 @@
+.test {
+  .layout--desktop &__content {
+    //height: 310px;
+    height: 37.8vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+    @media #{$home-height} {
+      height: 37.8vh;
+    }
+  }  
+  &__number {
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: bold;
+    @include circle(58px);
+    padding: 13px 3px;
+    text-align: center;
+    left: 50%;
+    margin-left: -29px;
+    background: $color--alt;
+  }
+  .layout--desktop &__number {
+    margin: 1.46vh auto 0;
+    margin-left: -3rem;
+    
+    @media #{$home-height} {
+      @include size(7vh);
+      padding: 1.59vh 3px;
+      font-size: 3.9vh;
+      margin-left: -4.68vh;
+    }
+  }
+  .layout--mobile &__number {
+    @include absolute(bottom 90px);
+  }
+  
+  &__control {
+    .icon {
+      cursor: pointer;
+      color: $color--alt;
+      margin-bottom: 1.25rem;
+    }
+    .btn {
+      width: 100%;
+      font-weight: normal;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .layout--desktop &__control {
+    margin-bottom: 15.85vh;
+    width: 150px;
+    &--camera .icon {
+      @include size(72px, 54px);
+      @media #{$home-height} {
+        @include size(8.78vh, 6.59vh);
+      }
+    }
+    &--phone .icon {
+      @include size(50px, 94px);
+      @media #{$home-height} {
+        @include size(6.1vh, 11.46vh);
+      }
+    }
+    .btn {
+      padding: 12px 10px;
+    }
+  }
+  .layout--mobile &__controls {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 0.75rem;
+  }
+  .layout--mobile &__control {
+    width: 50%;
+    //height: 112px;
+    .icon {
+      display: block;
+      margin: 0 auto 1rem;
+    }
+    &--camera .icon {
+      @include size(52px, 36px);
+    }
+    &--phone .icon {
+      @include size(36px, 67px);
+    }
+    .btn {
+      padding: 4px 6px;
+      font-size: 10px;
+      width: 110px;
+    }
+  }
+  .layout--desktop &__photo,
+  .layout--desktop &__photo img {
+    height: 100%;
+    width: auto;
+  }
+  .layout--mobile &__photo,
+  .layout--mobile &__photo img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.result {
+  &__title {
+    font-size: 72px;
+    line-height: 1;
+    font-weight: 600;
+    @media #{$xs} {
+      font-size: 44px;
+      margin-top: 1em;
+      letter-spacing: 0.08em;
+    }
+  }
+  &__sum {
+    font-size: 160px;
+    line-height: 1;
+    font-weight: 300;
+    @media #{$xs} {
+      font-size: 140px;
+      line-height: 120px;
+    }
+  }
+  &__total {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}

@@ -48,7 +48,7 @@
       </div>
       <div class="grid-center-noGutter mt-2 ls-3">
         <div class="col-10 slider-wrapper">
-          <div class="slider owl-carousel mx-auto">
+          <div class="slider owl-carousel carousel--default mx-auto">
             <?php for ($i = 1; $i <= 4; $i++) { ?>
               <img src="<?=$root.'build/img/sarapultseva/slider-0'.$i.'.jpg'?>" class="owl-lazy" />
             <?php } ?>

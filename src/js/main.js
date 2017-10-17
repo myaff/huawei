@@ -6,6 +6,7 @@ let Anchor = require("./components/anchor");
 //let Input = require("./components/input");
 //let Select = require("./components/select");
 let Animation = require("./components/animation");
+let Test = require('./components/test');
 
 $(document).ready(function(){
   
@@ -17,7 +18,7 @@ $(document).ready(function(){
   //Input.init();
   //Select.init();
   Animation.init();
-  
+  Test.init();
 });
 
 
@@ -32,7 +33,8 @@ module.exports = {
    Carousel,
    Modal,
    Anchor,
-   Animation
+   Animation,
+   Test
    //Input,
    //Select
 };

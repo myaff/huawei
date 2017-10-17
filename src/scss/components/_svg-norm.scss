@@ -13,8 +13,7 @@ svg {
 		stroke: currentColor;
 		
 	}
-	&.stroke-2 use {
-		stroke-width: 2;
+	&.stroke use {
 		stroke: currentColor;
 	}
 }

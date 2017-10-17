@@ -14,7 +14,7 @@
           <div class="promo__logo mt-5 a-fade-slide a-delay-3">
             <img src="<?=$root?>build/img/promo-logo.png" alt="">
           </div>
-          <a href="#" class="btn mt-4 a-fade-slide a-delay-4">узнать больше</a>
+          <a href="https://shop.huawei.ru/huawei-nova-2?utm_source=mc&utm_medium=article&utm_term=&utm_content=&utm_campaign=2017Q3_nova2_SP_MC" class="btn mt-4 a-fade-slide a-delay-4" target="_blank">узнать больше</a>
           <div class="promo__note mt-7 tp-text--right a-fade-slide a-delay-5">
             <img src="<?=$root?>build/img/promo-note.png" alt="">
           </div>
