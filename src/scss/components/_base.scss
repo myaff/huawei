@@ -41,7 +41,9 @@ body {
     background: url('../img/test-bg.jpg') top center no-repeat;
     background-size: cover;
     min-height: 100vh;
-    
+    @media screen and (max-height: 630px) {
+      background-position-y: 20px;
+    }
     @media screen and (min-height: 630px) and (max-height: 767px) {
       background-position-y: 3vh;
     }

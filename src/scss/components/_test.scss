@@ -6,8 +6,8 @@
     justify-content: center;
     align-items: flex-end;
     
-    @media #{$home-height} {
-      height: 37.8vh;
+    @media screen and (max-height: 630px) {
+      height: 310px;
     }
   }  
   &__number {
@@ -53,6 +53,12 @@
   }
   .layout--desktop &__control {
     margin-bottom: 15.85vh;
+    @media screen and (max-height: 630px) {
+      margin-bottom: 130px;
+    }
+    //@media screen and (max-height: 630px) {
+    //  margin-bottom: 50px;
+    //}
     width: 150px;
     &--camera .icon {
       @include size(72px, 54px);
