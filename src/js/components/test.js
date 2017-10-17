@@ -77,7 +77,7 @@ function init(){
     autoHeight:true
   });
   
-  testCtrl.on('change', function() {
+  testCtrl.on('click', function() {
     processTest(this, isLastSlide());
   });
   testReset.on('click', function() {
